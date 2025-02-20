@@ -1,0 +1,17 @@
+[package]
+name = "archive_password_cracker"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+zip = "0.5.13"
+rar = { version = "0.1.0", optional = true }
+regex = "1.5.6"
+tokio = { version = "1", features = ["full"] }
+
+[lib]
+crate-type = ["cdylib"]
+
+[[bin]]
+name = "archive_password_cracker"
+path = "src/main.rs"
